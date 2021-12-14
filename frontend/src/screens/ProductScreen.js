@@ -8,7 +8,7 @@ const ProductScreen = ()=>{
     const {id}=useParams()
     const [product, setProduct] = useState([])
     useEffect(async() => {
-        const {data}=await axios.get(`http://127.0.0.1:8000/api/product/`+id)
+        const {data}=await axios.get(`/api/product/`+id)
         setProduct(data)
     }, [])
     return (
